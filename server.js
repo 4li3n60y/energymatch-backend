@@ -24,8 +24,11 @@ const app = express()
 
 // Allow requests from your React frontend
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-  credentials: true, // allows cookies to be sent
+  origin: [
+    'http://localhost:5173',
+    'https://frabjous-scone-522143.netlify.app',
+  ],
+  credentials: true,
 }))
 
 // Parse incoming JSON request bodies (so we can read req.body)
