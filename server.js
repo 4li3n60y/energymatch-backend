@@ -28,6 +28,8 @@ app.use(cors({
     'http://localhost:5173',
     'https://frabjous-scone-522143.netlify.app',
   ],
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"]
   credentials: true,
 }))
 
